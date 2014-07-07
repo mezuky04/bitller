@@ -37,11 +37,6 @@ class AccountController extends BaseController {
      */
     public function __construct() {
 
-        // User not logged in
-        if (!Session::get('loggedIn')) {
-            return false;
-        }
-
         // Set user info
         $this->_userSession = Session::get('user');
 
