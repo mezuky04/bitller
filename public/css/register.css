@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.register {
+    height: 300px;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.register-form-top {
+    width: 344px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #F39C12;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.register-form {
+    width: 344px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.input {
+    display: block;
+    height: 40px;
+    width: 260px;
+    margin: 0 auto;
+    border: 2px solid #ECEFF0;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+.first-name {
+    background: url("../../../img/name-input.png") no-repeat scroll 9px 13px;
+    padding-left: 35px;
+}
+
+.last-name {
+    background: url("../../../img/name-input.png") no-repeat scroll 9px 13px;
+    padding-left: 35px;
+}
+
+.email {
+    background: url("../../../img/login-email.png") no-repeat scroll 9px 13px;
+    padding-left: 35px;
+}
+.password {
+    background: url("../../../img/login-password.png") no-repeat scroll 9px 13px;
+    padding-left: 35px;
+}
+
+.error-input {
+    border: 2px solid #f88585;
+}
+
+.error-message {
+    display: block;
+    text-align: left;
+    width: 300px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #f88585;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+.register-button {
+    height: 40px;
+    width: 299px;
+    border: none;
+    border-radius: 3px;
+    background-color: #1ABC9C;
+    color: #ffffff;
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    transition: 0.35s;
+    cursor: pointer;
+    outline: none;
+}
+
+.register-button:hover {
+    background-color: #48c9b0;
+    transition: background-color 0.35s ease-in-out;
+}
+
+.login {
+    display: block;
+    width: 348px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #2692da;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    outline: none;
+    transition: 0.35s;
+    cursor: pointer;
+}
+
+.login:hover {
+    background-color: #37A8F4;
+    transition: background-color 0.35s ease-in-out;
+}
+
+.login-btn {
+    text-decoration: none;
+}

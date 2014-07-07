@@ -1,0 +1,867 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+html, body {
+    height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+#header {
+    position: fixed;
+    background-color: #ffffff;
+    height: 50px;
+    width: 100%;
+    min-width: 1200px;
+    top: 0;
+    border-bottom: 2px solid #ECEFF0;
+    z-index: 2;
+}
+.header-content {
+    background-color: #ffffff;
+    position: fixed;
+    width: 1200px;
+    height: 50px;
+    left: 50%;
+    margin-left: -600px;
+    margin-bottom: 50px;
+}
+
+.logo {
+    float: left;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-image: url("../../../img/logo.png");
+    cursor: pointer;
+    text-indent:-9999px;
+    margin-top: 5px;
+}
+
+.menu {
+    position: absolute;
+    display: inline-block;
+    margin-left: 20px;
+}
+.menu-item {
+    padding-top: 15px;
+    display: inline-block;
+    top: 0;
+    font-family: sans-serif;
+    height: 31px;
+    margin-right: 13px;
+}
+.menu-item:hover {
+    border-bottom: 4px solid #2692da;
+}
+.menu-item a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #a6a6a6;
+}
+/*
+.menu-item {
+    display: inline-block;
+    margin-right: 20px;
+    font-family: sans-serif;
+    background-color: #2692da;
+    height: 60px;
+}
+
+.menu-item a {
+    color: #a6a6a6;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.menu-item a:hover {
+    text-decoration: underline;
+    color: #2692da;
+}*/
+
+.search {
+    display: inline-block;
+    margin-left: 310px;
+    margin-top: 6px;
+}
+
+.search-box {
+    height: 34px;
+    width: 400px;
+    border: 1px solid #ECEFF0;
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+    outline: none;
+    transition: 0.35s;
+    background: url("../../../img/search.png") no-repeat scroll 7px 7px;
+    padding-left:40px;
+}
+.search-box:focus {
+    background-color: #ffffff;
+    transition: background-color 0.35s ease-in-out;
+}
+::-webkit-input-placeholder {
+    color: #919191;
+}
+
+.search-button {
+    display: none;
+}
+
+.add-tutorial {
+    display: inline-block;
+    margin-left: 30px;
+    float: right;
+    height: 35px;
+    margin-top: 6px;
+}
+/*
+.add-tutorial button {
+    margin-top: 10px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #2692da;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+    outline: none;
+    transition: 0.35s;
+    cursor: pointer;
+}
+
+.add-tutorial button:hover {
+    background-color: #086DB0;
+    transition: background-color 0.35s ease-in-out;
+}*/
+
+.account-info {
+    float: right;
+    display: inline-block;
+    height: 30px;
+    margin-top: 8px;
+    width: 140px;
+}
+
+.account-info img {
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+}
+
+.account-info .welcome {
+    display: inline-block;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    vertical-align: top;
+    margin-top: 6px;
+    margin-left: 10px;
+}
+
+.account-info .welcome a {
+    text-decoration: none;
+    color: #2692da;
+}
+.account-info-ex {
+    display: none;
+    position: fixed;
+    border: 2px solid #dbdbdb;
+    border-radius: 3px;
+    background-color: #f4f4f4;
+    width: 140px;
+    z-index: 1000000000000000000000000000;
+}
+.account-info-ex .items {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.account-info-ex a .account-item {
+    display: block;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    padding-left: 15px;
+    color: #878787;
+}
+
+.account-info-ex .account-item:hover {
+    background-color: #ffffff;
+}
+.account-info-ex .items a {
+    text-decoration: none;
+}
+
+#content {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 1200px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.feed-menu {
+    position: fixed;
+    display: inline-block;
+    height: 400px;
+    width: 250px;
+    border: 1px solid #e5e8e9;
+    border-radius: 4px;
+    vertical-align: top;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+.feed {
+    margin-left: 300px;
+    display: inline-block;
+}
+
+.tutorial-post {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid #E5E8E9;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #ffffff;
+}
+
+.user-who-posted {
+    height: 40px;
+    width: 500px;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.user-who-posted img {
+    border-radius: 50%;
+}
+
+.user-who-posted .info {
+    display: inline-block;
+    height: 40px;
+    vertical-align: top;
+}
+
+.user-who-posted .action {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: sans-serif;
+    color: #a6a6a6;
+    font-size: 15px;
+}
+
+.user-who-posted .action a {
+    text-decoration: none;
+    color: #2692da;
+    font-weight: bold;
+}
+
+.user-who-posted .action a:hover {
+    text-decoration: underline;
+    color: #2692da;
+}
+
+.post-content {
+    width: 580px;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.post-content .title a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #a6a6a6;
+}
+
+.post-content .title a:hover {
+    color: #2692da;
+
+}
+
+.post-content img {
+    display: block;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.post-content .description {
+    width: 550px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #7b7b7b;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.post-comments {
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid #E5E8E9;
+    border-top: none;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: #f7f7f7;
+}
+
+.post-comment {
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.comment {
+    display: inline-block;
+    vertical-align: top;
+    width: 520px;
+}
+
+.comment-info {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.comment-info a {
+    text-decoration: none;
+    color: #606769;
+}
+
+.comment-info a:hover {
+    text-decoration: underline;
+}
+
+.comment-info .date-time {
+    display: inline-block;
+    margin-left: 10px;
+    color: #8e8e8e;
+    font-weight: normal;
+}
+.comment .remove-comment {
+    display: inline-block;
+    float: right;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #878787;
+    cursor: pointer;
+}
+
+.comment .remove-comment:hover {
+    vertical-align: top;
+    color: #707070;
+}
+
+.comment .text {
+    margin-left: 5px;
+    padding-right: 5px;
+    color: #7b7b7b;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+.write-comment {
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.write-comment img {
+    height: 32px;
+    width: 32px;
+    border-radius: 4px;
+}
+
+.write-comment form {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.write-comment .comment-input {
+    height: 28px;
+    width: 506px;
+    border: 1px solid #e3e7e9;
+    padding-left: 10px;
+    margin-left: 5px;
+    outline: none;
+}
+
+.write-comment .comment-input:hover {
+    border-color: #d0d4d5;
+}
+
+.write-comment .comment-textarea {
+    display: none;
+    border-color: #D7DBDC;
+    outline: none;
+    resize: none;
+    width: 506px;
+}
+
+.write-comment .comment-buttons {
+    display: none;
+}
+
+.submit-comment-button, .cancel-comment-button {
+    border: none;
+    border-bottom: 2px solid #27A78E;
+    border-radius: 3px;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 7px 12px 7px 12px;
+    outline: none;
+    cursor: pointer;
+}
+
+.submit-comment-button {
+    border-top: 1px solid #2cc1a4;
+    background-color: #2CC1A4;
+}
+
+.submit-comment-button:hover {
+    border-bottom: 2px solid #2cc1a4;
+}
+
+.cancel-comment-button {
+    border: 1px solid #d8d8d8;
+    background-color: #ffffff;
+    border-bottom: 2px solid #d8d8d8;
+    color: #8f8f8f;
+    /*box-shadow: 0 7px 1px -6px #d8d8d8;*/
+}
+
+.cancel-comment-button:hover {
+    border-color: #bababa;
+}
+
+.feed-last {
+    float: right;
+    width: 290px;
+    margin-top: 90px;
+}
+
+.write-tutorial {
+    background-color: #2692da;
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.write-tutorial .title {
+    display: block;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #ffffff;
+}
+.write-tutorial .text {
+    font-family: Verdana, sans-serif;
+    color: #ffffff;
+}
+
+
+#footer {
+    height: 50px;
+    margin-top: 160px;
+    background-color: #e4e4e4;
+    border-top: 2px solid #dbdbdb;
+}
+
+/** Account settings page */
+.settings-account {
+    position: fixed;
+    display: inline-block;
+    width: 300px;
+    border: 1px solid #e5e8e9;
+    border-radius: 4px;
+    vertical-align: top;
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+.settings-account .cover {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height: 120px;
+    width: 300px;
+}
+.settings-account img {
+    border-radius: 3px;
+}
+.settings-account .profile {
+    position: relative;
+    display: block;
+    float: right;
+    z-index: 1000000000000;
+    border-radius: 5px;
+    border: 3px solid #ffffff;
+    height: 100px;
+    width: 100px;
+    margin-top: -50px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+}
+.settings-account .user-name {
+    display: inline-block;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+.settings-account .user-name a {
+    text-decoration: none;
+    color: #2692da;
+}
+.settings-account .user-name a:hover {
+    text-decoration: underline;
+}
+.settings-account .followers {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #b1b1b1;
+}
+.setting-box {
+    position: absolute;
+    width: 880px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-left: 320px;
+    border-radius: 2px;
+}
+.general-settings {
+
+
+}
+
+.general-settings .title {
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    color: #7a7a7a;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.option {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #7a7a7a;
+    width: 840px;
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #f7f7f7;
+}
+.option .name-icon, .option-expanded .name-icon {
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.option .setting-option-value, .option-expanded .setting-option-value {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.option-expanded .setting-option-value {
+    color: #7a7a7a;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.option .settings-name, .option-expanded .settings-name {
+    display: inline-block;
+    width: 240px;
+}
+
+.option .name-value, .option-expanded .name-value {
+    display: inline-block;
+    width: 460px;
+}
+
+.option .edit, .option-expanded .edit {
+    width: 100px;
+}
+
+.option-expanded .edit {
+    margin-top: 5px;
+}
+
+.option-expanded {
+    display: none;
+    background-color: #f7f7f7;
+    width: 840px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.option-expanded .setting-icon {
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+    vertical-align: bottom;
+}
+
+.option-expanded .setting-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding-left: 5px;
+    color: #7a7a7a;
+}
+
+.option-expanded .setting-name {
+    display: inline-block;
+}
+
+.option-expanded .setting-exp-content {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.option-expanded .name-inputs {
+    width: 290px;
+    margin: 0 auto;
+}
+
+.option-expanded .input-text {
+    display: inline-block;
+    width: 102px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #7a7a7a;
+}
+
+.option-expanded .input {
+    width: 290px;
+    margin: 0 auto;
+}
+
+.option-expanded .name-input {
+    width: 175px;
+    height: 20px;
+    border: 1px solid #dddddd;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    outline: none;
+}
+
+.option-expanded .name-input:focus {
+    border-color: #2692da;
+}
+
+.option-expanded .display-as-select {
+    outline: none;
+    border: 1px solid #dddddd;
+}
+
+.option-expanded .setting-desc {
+    padding-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #a7a7a7;
+    padding-bottom: 10px;
+}
+
+.option-expanded .password-to-save {
+    width: 400px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.option-expanded .password-to-save .text {
+    display: inline-block;
+    color: #7a7a7a;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.option-expanded .save-password-input {
+    display: block;
+}
+
+.divider {
+    width: 850px;
+    height: 1px;
+    margin-left: 10px;
+    background-color: #f1f1f1;
+}
+/** End account setting page */
+
+
+/** Add Tutorial page */
+
+.new-tutorial {
+    position: relative;
+    border: 1px solid black;
+}
+
+.editor-block {
+    float: left;
+    margin-top: 10px;
+    top: 0;
+    display: inline-block;
+}
+
+.editor {
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.add-tutorial-form .title {
+    height: 30px;
+    width: 888px;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+
+}
+
+.categories {
+    float: right;
+    display: inline-block;
+    height: 300px;
+    width: 270px;
+    margin-top: 10px;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.or {
+    color: #ababab;
+    font-family: 'Roboto', sans-serif;
+}
+
+/** Profile page */
+.profile-header {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 9;
+}
+
+.profile-header .cover {
+    margin-left: 300px;
+}
+
+.profile-header .user-info {
+    position: relative;
+    margin-top: -305px;
+    height: 300px;
+    width: 300px;
+    background-color: #454545;
+}
+
+.profile-header .user-info .content {
+    position: relative;
+    z-index: 10;
+    color: #ffffff;
+    text-align: center;
+}
+
+.profile-header .profile-picture {
+    width: 120px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.profile-header .profile-picture img {
+    position: relative;
+    border-radius: 50%;
+}
+
+.profile-header .name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    color: #ffffff;
+}
+
+.profile-header .description {
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+.profile-header .description a {
+    color: #ffffff;
+}
+
+.profile-header .rep-btn {
+    margin-top: 20px;
+}
+
+.profile-menu {
+    height: 50px;
+    width: 1200px;
+    background-color: #ffffff;
+}
+
+/** Buttons section */
+.button {
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 7px 12px 7px 12px;
+    outline: none;
+    cursor: pointer;
+}
+
+.disabled {
+    opacity: 0.8;
+}
+
+.yellow {
+    border-bottom: 2px solid #F2C300;
+    background-color: #F8DE73;
+}
+
+.yellow:hover {
+    border-bottom-color: #f8de73;
+}
+
+.turquoise {
+    border-bottom: 2px solid #27A78E;
+    background-color: #2CC1A4;
+}
+.turquoise:hover {
+    border-bottom-color: #2cc1a4;
+}
+.bold {
+    font-weight: bold;
+    color: #dd6767;
+}
